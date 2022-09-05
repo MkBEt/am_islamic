@@ -2,10 +2,10 @@
             font-family: 'amazo';  src: url('./fonts/andlso.ttf');
             }
  @font-face {
-            font-family: 'mirza';  src: url('https://github.com/MkBEt/alquran/blob/main/asset/css/fonts/mirza.ttf');
+            font-family: 'mirza';  src: url('./fonts/mirza.ttf');
             }
 @font-face {
-            font-family: 'amh';  src: url('https://github.com/MkBEt/alquran/blob/main/asset/css/fonts/Adwa.ttf');
+            font-family: 'amh';  src: url('./fonts/Adwa.ttf');
             }
             @font-face {
             font-family: 'ar-bold';  src: url('./fonts/ar_bold.ttf');
