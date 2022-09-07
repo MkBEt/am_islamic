@@ -131,7 +131,7 @@ background-color: #3FA796;
 
 .chapter h4 {
     font-size: 18pt;
-   padding-left: 10px;
+   padding-right: 10px;
     margin: 0;
     color: #fff;
     font-family:'amh';
@@ -140,7 +140,7 @@ background-color: #3FA796;
 .chapter h5 {
     font-size: 20pt;
     margin: 0;
-    padding-right: 20px;
+    padding-right: 5px;
     color: #fff;
     font-family:'ar-bold';
 }
