@@ -111,7 +111,7 @@ aside {
 }
 
 .chapter {
-    padding: 25px;
+    padding: 20px;
     transition: all 0.3s;
 }
 
@@ -130,7 +130,7 @@ background-color: #3FA796;
 }
 
 .chapter h4 {
-    font-size: 18pt;
+    font-size: 16pt;
    padding-right: 10px;
     margin: 0;
     color: #fff;
@@ -138,7 +138,7 @@ background-color: #3FA796;
 }
 
 .chapter h5 {
-    font-size: 20pt;
+    font-size: 18pt;
     margin: 0;
     padding-right: 5px;
     color: #fff;
@@ -225,12 +225,12 @@ main .item .ayat h2 {
 
 main .item .ayat .latin {
     color: #3FA796;
-    font-size: 12pt;
+    font-size: 10pt;
     margin-bottom: 0;
 }
 
 main .item .ayat .translate {
-    font-size: 12pt;
+    font-size: 9pt;
     font-family:'amh';
 }
 
