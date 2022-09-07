@@ -9,17 +9,6 @@
             font-family: 'ar-bold';  src: url('./fonts/ar_bold.ttf');
             }
             
-            .bismAllah-container{
-  display: flex;
-  justify-content: center;
-  
-}
-.bismAllah{
-	text-align: center;
-  width: 90%;
-  margin: auto;
-  
-}
             
 section
 {
@@ -231,7 +220,7 @@ main .item .ayat .latin {
 }
 
 main .item .ayat .translate {
-    font-size: 9pt;
+    font-size: 10pt;
     font-family:'amh';
 }
 
