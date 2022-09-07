@@ -210,7 +210,8 @@ main .item .number {
 main .item .ayat h2 {
     text-align: right;
     font-family:'mirza';
-font-size: 14pt;
+font-size: 16pt;
+margin-left: 20;
 }
 
 main .item .ayat .latin {
