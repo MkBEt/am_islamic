@@ -221,6 +221,7 @@ main .item .number {
 main .item .ayat h2 {
     text-align: right;
     font-family:'mirza';
+font-size: 12pt;
 }
 
 main .item .ayat .latin {
