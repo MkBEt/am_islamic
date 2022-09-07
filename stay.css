@@ -8,7 +8,9 @@
 @font-face {
             font-family: 'ar-bold';  src: url('./fonts/ar_bold.ttf');
             }
-            
+@font-face {
+            font-family: 'eng';  src: url('./fonts/Amaranth.otf');
+            }            
             
 section
 {
@@ -220,6 +222,18 @@ main .item .ayat .latin {
     margin-bottom: 0;
 }
 
+main .item .ayat .translateam {
+    font-size: 10pt;
+    font-family:'amh';
+}
+main .item .ayat .translatear {
+    font-size: 15pt;
+    font-family:'mirza';
+}
+main .item .ayat .translateen {
+    font-size: 10pt;
+    font-family:'eng';
+}
 main .item .ayat .translate {
     font-size: 10pt;
     font-family:'amh';
