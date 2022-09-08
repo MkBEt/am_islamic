@@ -202,12 +202,12 @@ main .item .number {
     background-repeat: no-repeat;
     background-position: center;
     color: #fff;
-    font-size: 11pt;
+    font-size: 10pt;
     text-align: center;
     font-family:'amh';
     width: 35px;
     height: 35px;
-    padding-top: 9px;
+    padding-top: 5px;
     transition: all 0.3s;
 }
 
