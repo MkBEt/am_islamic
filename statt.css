@@ -214,6 +214,7 @@ main .item .ayat h2 {
     font-family:'mirza';
 font-size: 16pt;
 margin-left: 20;
+color: #3FA796;
 }
 
 main .item .ayat .latin {
@@ -227,9 +228,10 @@ main .item .ayat .translateam {
     font-family:'amh';
 }
 main .item .ayat .translatear {
-    font-size: 15pt;
+    text-align: right;
     font-family:'mirza';
-    color: #09306C;
+font-size: 14pt;
+margin-right: 20;
 }
 main .item .ayat .translateen {
     font-size: 13pt;
