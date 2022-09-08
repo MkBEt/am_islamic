@@ -152,7 +152,7 @@ background-color: #3FA796;
     text-align: center;
     width: 35px;
     height: 35px;
-    padding-top: 9px;
+    padding-top: 7px;
     transition: all 0.3s;
 }
 
@@ -207,7 +207,7 @@ main .item .number {
     font-family:'amh';
     width: 35px;
     height: 35px;
-    padding-top: 5px;
+    padding-top: 7px;
     transition: all 0.3s;
 }
 
