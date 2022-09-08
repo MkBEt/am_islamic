@@ -227,8 +227,9 @@ main .item .ayat .translateam {
     font-family:'amh';
 }
 main .item .ayat .translatear {
-    font-size: 17pt;
+    font-size: 15pt;
     font-family:'mirza';
+    color: #3FA796;
 }
 main .item .ayat .translateen {
     font-size: 13pt;
