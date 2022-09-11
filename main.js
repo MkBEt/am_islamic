@@ -96,7 +96,6 @@ links.forEach(link => {
 //*End Link Section Connect From nav BarLink To Section
 // *----------------------------------------------------
 
-
 // *------------------------------------------------------
 //*Start Surah APi
 let SurahsContainer = document.querySelector('.surhasContainer');
@@ -131,14 +130,17 @@ function getSurahs()
                 /*fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranindopak/${index + 1}.min.json`)*/
                 .then(response => response.json())
                 .then(data=>{
+        var id = index+1
+          if((id==1)||(id==9)){
+                    AyatContainer.innerHTML = '';
+           }else{
                     AyatContainer.innerHTML = `
 <p1> بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِی </p1> <p>በአላህ ስም እጅግ በጣም ሩኅሩህ በጣም አዛኝ በኾነው፡፡</p>
                         `;
-                    let Ayat = data.chapter;
-                    
+            }
+                    let Ayat = data.chapter;                  
                      getSur(Ayat)
-                     })
-                
+                     })            
             })
         })
         let closePopup = document.querySelector('.close-popup');
@@ -167,9 +169,6 @@ function getSur(Ayat)
 	
 //*End Surah APi
 // *------------------------------------------------------
-
-
-
 
 // *------------------------------------------------------
 //*Start Awkat Elsalah
