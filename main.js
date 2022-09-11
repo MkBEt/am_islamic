@@ -132,9 +132,8 @@ function getSurahs()
                 .then(response => response.json())
                 .then(data=>{
                     AyatContainer.innerHTML = `
-<div class="bismAllah">
-              <img src="./images/bis.png"alt="bismAllah" class="bismAllah"></img>
-            </div>`;
+<p1> بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِی </p1> <p>በአላህ ስም እጅግ በጣም ሩኅሩህ በጣም አዛኝ በኾነው፡፡</p>
+                        `;
                     let Ayat = data.chapter;
                     
                      getSur(Ayat)
