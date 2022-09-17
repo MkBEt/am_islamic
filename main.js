@@ -10,7 +10,6 @@ exploreBtn.addEventListener('click',()=>{
 //*End Explore Button
 // *--------------------------------------------------
 
-
 // *--------------------------------------------------
 //*Start NavBar
 let fixedNav = document.querySelector('.header'),
@@ -28,9 +27,6 @@ scrollBtn.addEventListener('click',()=>{
 //*End NavBar
 // *--------------------------------------------------
 
-
-
-
 // *--------------------------------------------------
 //* Start Hadith Changer
 
@@ -42,16 +38,12 @@ let hadithContainer = document.querySelector('.hadithContainer'),
     //* End Hadith Changer
 // *--------------------------------------------------
 
-
 // *--------------------------------------------------
 //* Start Hadith Changer (API)
 HadithChanger();
 function HadithChanger()
 {
-    fetch("https://cdn.jsdelivr.net/gh/MkBEt/quran-api@1/hadith.json")
-    .then(response => response.json())
-    .then(data =>{
-        
+        $.getJSON('hadith.json', (data) =>{
         let Hadiths = data.hadith;
         changeHadith();
         next.addEventListener('click',()=>{
@@ -71,7 +63,6 @@ function HadithChanger()
 }
 //* End Hadith Changer(API)
 // *--------------------------------------------------
-
 
 // *------------------------------------------------------
 //*Start Link Section Connect From nav BarLink To Section
@@ -103,11 +94,10 @@ getSurahs()
 
 function getSurahs()
 {
-    //fetch Surahs meta data {Name of SuraHS}
-    fetch("https://cdn.jsdelivr.net/gh/MkBEt/quran-api@1/apam.json")
+    fetch("https://cdn.jsdelivr.net/gh/MkBEt/quran/api/amh/title.json")
     .then(response => response.json())
     .then(data=>{
-        let surahs = data.data;
+        let surahs = data.chapters;
         let numberOfSurahs = 114;
         SurahsContainer.innerHTML = "";
         for (let i = 0; i < numberOfSurahs ; i++) {
@@ -115,56 +105,34 @@ function getSurahs()
             SurahsContainer.innerHTML += 
                 `
                     <div class="surah">
-                        <p>${surahs[i].ar}</p>
-                        <p1>${surahs[i].am}</p1>
+                        <p>${surahs[i].name_ar}</p>
+                        <p1>${surahs[i].name_am}</p1>
                     </div>
                 `
         }
-
         let SurahsTitels = document.querySelectorAll('.surah');
         let popup = document.querySelector('.surah-popup'),
             AyatContainer = document.querySelector('.ayat');
         SurahsTitels.forEach((title,index)=>{
             title.addEventListener('click',()=>{
-                fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/amh-muhammedsadiqan/${index + 1}.min.json`)
-                /*fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranindopak/${index + 1}.min.json`)*/
+              fetch(`https://cdn.jsdelivr.net/gh/MkBEt/quran/api/amh/surah/${index + 1}.json`)
                 .then(response => response.json())
                 .then(data=>{
-        var id = index+1
-          if((id==1)||(id==9)){
                     AyatContainer.innerHTML = '';
-           }else{
-                    AyatContainer.innerHTML = `
-<p1> بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِی </p1> <p>በአላህ ስም እጅግ በጣም ሩኅሩህ በጣም አዛኝ በኾነው፡፡</p>
-                        `;
-            }
-                    let Ayat = data.chapter;                  
-                     getSur(Ayat)
-                     })            
-            })
-        })
+                    let Ayat = data.quran;                  
+                     Ayat.forEach(aya=>{
+ 	                popup.classList.add('active');
+                        AyatContainer.innerHTML += `
+                            <p1>${aya.verse}. ${aya.ar}</p1> <p> ${aya.tr}</p>
+                        `}) 
+					 })
+                })            
+           })
         let closePopup = document.querySelector('.close-popup');
         closePopup.addEventListener('click',()=>{
             popup.classList.remove('active');
         })
     })   
-}
- 
-function getSur(Ayat)
-{
-	let popup = document.querySelector('.surah-popup'),
-            AyatContainer = document.querySelector('.ayat');
-        var chaa =Ayat[0]. chapter;
- fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranacademy/${chaa}.min.json`)
-                .then(response => response.json())
-                .then(data=>{
-                	 var ama = data.chapter;
- Ayat.forEach(aya=>{
- 	                popup.classList.add('active');
-         var amm= aya.verse  - 1
-                        AyatContainer.innerHTML += `
-                            <p1>${aya.verse}. ${ama[amm].text}</p1> <p> ${aya.text}</p>
-                        `}) })
 }
 	
 //*End Surah APi
@@ -183,26 +151,24 @@ function getPrayTimes()
     .then(data =>{
         let times = data.data.timings;
 
-let hd = data.data.date.hijri.date;
-let hw = data.data.date.hijri.weekday.en;
-let hm = data.data.date.hijri.month.en;
-let gd = data.data.date.gregorian.date;
-let gw = data.data.date.gregorian.weekday.en;
-let gm = data.data.date.gregorian.month.en;
+		let hd = data.data.date.hijri.date;
+		let hw = data.data.date.hijri.weekday.en;
+		let hm = data.data.date.hijri.month.en;
+		let gd = data.data.date.gregorian.date;
+		let gw = data.data.date.gregorian.weekday.en;
+		let gm = data.data.date.gregorian.month.en;
 		let holi = data.data.date.hijri.holidays;
         let txt = gd+" "+gm+" "+gw;
-let txh = " "+hd+" "+hm+" "+hw+" ";
-        cards.innerHTML =             `
+		let txh = " "+hd+" "+hm+" "+hw+" ";
+	        cards.innerHTML =             `
                 <div class="date">
-                
                     <p>📅 ዛሬ በግሪጎሪያን ቀን: </p>
                     <p>${txt} </p>
                     <p>📅 ዛሬ በሂጅራ ቀን: </p>
                     <p>${txh} </p>
                 </div>
             `
-        for (let time in times)
-        {
+        for (let time in times){
             if((time=="Firstthird")|(time=="Lastthird")|(time=="Imsak")|(time=="Sunset")|(time=="Midnight")){
           }else{
             cards.innerHTML+= 
@@ -226,6 +192,7 @@ let txh = " "+hd+" "+hm+" "+hw+" ";
 
 // *------------------------------------------------------
 //*Start Active SideBar
+
 let bars = document.querySelector('.bars'),
     SideBar = document.querySelector('.header ul');
 bars.addEventListener('click',()=>{
@@ -243,34 +210,3 @@ $(document).ready(function(){
         $(".loading").fadeOut(1000)
     })
 })
-
-
-
-
-
-//*End Active SideBar
-// *------------------------------------------------------
-
-
-
-// fetch("https://api.aladhan.com/v1/calendar?latitude=30.007413&longitude=31.4913182&method=1&timezonestring=Africa/Cairo")
-//     .then(response => response.json())
-//     .then(data=>{
-//         let allData = data.data;
-//         console.log(allData)
-        
-//     })
-
-
-
-
-// fetch("https://api.aladhan.com/v1/timingsByAddress/14-08-2022?address=Cairo,EGY&method=8")
-// .then(response => response.json())
-// .then(data=>{
-//     let allTimes =data.data.timings;
-//     console.log(allTimes)
-//     for(let time in allTimes){
-//         console.log(allTimes[time])
-//     }
-    
-// })
