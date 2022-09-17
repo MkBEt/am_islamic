@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @font-face {
-            font-family: 'mirza';  src: url('./fonts/mirza.ttf');
+            font-family: 'mirza';  src: url('../fonts/mirza.ttf');
             }
 @font-face {
-            font-family: 'amh';  src: url('./fonts/Adwa.ttf');
+            font-family: 'amh';  src: url('../fonts/Adwa.ttf');
             }
 @font-face {
-            font-family: 'ar-bold';  src: url('./fonts/ar_bold.ttf');
+            font-family: 'ar-bold';  src: url('../fonts/ar_bold.ttf');
             }
 @font-face {
-            font-family: 'eng';  src: url('./fonts/Amaranth.otf');
+            font-family: 'eng';  src: url('../fonts/Amaranth.otf');
             }            
             
 section
