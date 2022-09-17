@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+            font-family: 'mirza';  src: url('./fonts/mirza.ttf');
+            }
+@font-face {
+            font-family: 'amh';  src: url('./fonts/Adwa.ttf');
+            }
+@font-face {
+            font-family: 'ar-bold';  src: url('./fonts/ar_bold.ttf');
+            }
+@font-face {
+            font-family: 'eng';  src: url('./fonts/Amaranth.otf');
+            }            
+            
+section
+{
+    font-size: 20px;
+    text-align: center;
+    color: #3FA796;
+    font-family:'amh';
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+
+    
+body {
+    background: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #3FA796;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: #338b7d;
+}
+
+::-webkit-scrollbar {
+    background: #ddd;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(190, 190, 190);
+}
+
+#loadingw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #3FA796;
+    z-index: 15;
+}
+
+#loading .loading-title img {
+    border-radius: 50px;
+    margin-bottom: 200px;
+}
+
+header {
+	align-items: center;
+    position: fixed;
+    width: 100%;
+    background: #3FA796;
+    padding: 0px 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 16pt;
+    margin: 0;
+}
+
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    color :#fff;
+}
+
+header .bars {
+    margin-right: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+aside {
+    position: fixed;
+    background: #fff;
+    height: 100vh;
+    width: 25%;
+    padding-top: 68px;
+    overflow-y: scroll;
+}
+
+.chapter {
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.breadcrumb-item-chapter {
+    margin-left: 20px;
+}
+
+.chapter.active {
+    
+background-color: #3FA796;
+}
+
+.chapter:hover {
+    
+    cursor: pointer;
+}
+
+.chapter h4 {
+    font-size: 16pt;
+   padding-right: 10px;
+    margin: 0;
+    color: #fff;
+    font-family:'amh';
+}
+
+.chapter h41 {
+    font-size: 18pt;
+   padding-right: 10px;
+    margin: 0;
+    color: #fff;
+    font-family:'eng';
+}
+
+.chapter h5 {
+    font-size: 18pt;
+    margin: 0;
+    padding-right: 5px;
+    color: #fff;
+    font-family:'ar-bold';
+}
+
+.chapter p {
+    font-size: 9pt;
+    margin: 0;
+}
+
+.chapter .name-latin .number {
+    background: url('https://telegra.ph/file/d55860374eb6a15295744.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    font-size: 12pt;
+    font-family:'amh';
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    padding-top: 7px;
+    transition: all 0.3s;
+}
+
+.chapter:hover .name-latin .number {
+    background-image: url('https://telegra.ph/file/b261444c0c639ebdfcb74.png');
+    color: #3FA796;
+}
+
+.chapter.active .name-latin .number {
+    background-image: url('https://telegra.ph/file/b261444c0c639ebdfcb74.png');
+    color: #3FA796;
+}
+
+main {
+    padding-top: 10px;
+}
+
+.breadcrumb {
+    background: #fff;
+    padding: 15px 20px;
+    z-index: 11;
+}
+
+.breadcrumb .chapter-title h4 {
+    font-size: 15pt;
+    margin: 0;
+    font-family:'amh';
+    font-weight: 500;
+}
+
+.breadcrumb .chapter-audio i {
+    font-size: 15pt;
+}
+
+main .item .information {
+    padding: 10px;
+}
+
+main .item {
+    padding: 10px 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+main .item .number {
+    background: url('https://telegra.ph/file/d55860374eb6a15295744.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    font-size: 10pt;
+    text-align: center;
+    font-family:'amh';
+    width: 35px;
+    height: 35px;
+    padding-top: 7px;
+    transition: all 0.3s;
+}
+
+main .item .ayat h2 {
+    text-align: right;
+    font-family:'mirza';
+font-size: 16pt;
+margin-left: 20;
+color: #3FA796;
+}
+
+main .item .ayat .latin {
+    color: #3FA796;
+    font-size: 10pt;
+    margin-bottom: 0;
+}
+
+main .item .ayat .translateam {
+    font-size: 10pt;
+    font-family:'amh';
+}
+main .item .ayat .translatear {
+    text-align: right;
+    font-family:'mirza';
+font-size: 14pt;
+margin-right: 20;
+}
+main .item .ayat .translateen {
+    font-size: 13pt;
+    font-family:'eng';
+}
+main .item .ayat .translate {
+    font-size: 13pt;
+    font-family:'amh';
+}
+
+@media screen and (max-width:765px) {
+    aside {
+        display: none;
+        width: 100%;
+        z-index: 5;
+    }
+
+    aside::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .slideIn {
+        display: block;
+        animation: slideIn 0.3s;
+    }
+
+    @keyframes slideIn {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+            display: block;
+        }
+    }
+
+    .slideOut {
+        animation: slideOut 0.3s;
+    }
+
+    @keyframes slideOut {
+        from {
+            left: 0%;
+        }
+        to {
+            left: -100%;
+            display: none;
+        }
+    }
+}
